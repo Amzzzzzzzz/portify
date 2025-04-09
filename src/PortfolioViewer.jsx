@@ -30,7 +30,7 @@ export default function PortfolioViewer() {
             {
               user_id: data.id,
               event_type: 'view',
-              timestamp: new Date()
+              created_at: new Date()
             }
           ]);
         } catch (err) {
