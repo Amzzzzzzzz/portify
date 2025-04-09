@@ -14,45 +14,51 @@ export default function LandingPage() {
     const email = e.target.email.value;
     const password = e.target.psw.value;
     const repeatPassword = e.target['psw-repeat'].value;
-
+  
     if (password !== repeatPassword) {
       alert('Passwords do not match');
       return;
     }
-
-    const { data, error } = await supabase.auth.signUp({ email, password });
-
-    if (error) {
-      alert(error.message);
+  
+    const { data: signupData, error: signupError } = await supabase.auth.signUp({
+      email,
+      password,
+    });
+  
+    if (signupError) {
+      alert(signupError.message);
       return;
     }
-
-    const userId = data?.user?.id || (await supabase.auth.getUser()).data.user?.id;
-
-    const { data: existingProfile } = await supabase
-      .from('profiles')
-      .select('id')
-      .eq('id', userId)
-      .single();
-
-    if (!existingProfile) {
-      await supabase.from('profiles').insert([{
-        id: userId,
-        name: '',
-        title: '',
-        location: '',
-        phone: '',
-        email,
-        bio: '',
-        skills: [],
-        profile_image_url: ''
-      }]);
+  
+    const userId = signupData?.user?.id || (await supabase.auth.getUser()).data?.user?.id;
+  
+    if (!userId) {
+      alert('Signup successful, but user session is missing. Try logging in.');
+      return;
     }
-
+  
+    const { error: profileInsertError } = await supabase.from('profiles').insert([{
+      id: userId,
+      name: '',
+      title: '',
+      location: '',
+      phone: '',
+      email,
+      bio: '',
+      skills: [],
+      profile_image_url: ''
+    }]);
+  
+    if (profileInsertError) {
+      alert('Error creating user profile.');
+      return;
+    }
+  
     alert('Signup successful! Please check your email to confirm your account.');
     setShowSignup(false);
     navigate('/homepage');
   };
+  
 
   const handleLogin = async (e) => {
     e.preventDefault();
