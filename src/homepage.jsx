@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import './Homepage.css';
+import './homepage.css';
 import { useNavigate } from 'react-router-dom';
 import profilePic from './assets/profile-placeholder.jpg';
 import Sidebar from './components/Sidebar';
