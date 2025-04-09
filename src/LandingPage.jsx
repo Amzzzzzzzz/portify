@@ -54,7 +54,7 @@ export default function LandingPage() {
       return;
     }
   
-    alert('Signup successful! Please check your email to confirm your account.');
+    alert('Signup successful! Welcome to Portify.');
     setShowSignup(false);
     navigate('/homepage');
   };
