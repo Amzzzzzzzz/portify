@@ -1,0 +1,231 @@
+.template1 {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .template1-header {
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .template1-about {
+    margin-top: 2rem;
+  }
+  
+  .template1-projects {
+    margin-top: 2rem;
+  }
+  
+  .template1-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .template1-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+.template2 {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .template2-sidebar {
+    width: 250px;
+    padding: 2rem;
+    color: white;
+    flex-shrink: 0;
+  }
+  
+  .template2-sidebar h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .template2-content {
+    padding: 2rem;
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .template2-about {
+    margin-bottom: 2rem;
+  }
+  
+  .template2-projects h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .template2-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .template2-card {
+    width: 180px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .template2-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+  
+.template3 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+  }
+  
+  .template3-header {
+    padding: 2rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .template3-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  .template3-header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .template3-body {
+    padding: 2rem;
+  }
+  
+  .template3-bio {
+    margin-bottom: 2rem;
+  }
+  
+  .template3-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .template3-card {
+    width: 200px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .template3-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+  
+  .template4 {
+    width: 100%;
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  }
+  
+  .template4-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  .template4-left h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  .template4-right {
+    flex: 1 1 50%;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .template4-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: inherit;
+  }
+  
+  .template4-left h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .template4-left p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .template4-right h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .template4-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+    .template4-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+    }
+  
+    .placeholder-text {
+        color: white;
+        font-style: italic;
+      }
+  
+  .template4-image {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .template-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-shadow: none;
+    background: none;
+    border: none;
+  }
+  
+  .template4-about {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  

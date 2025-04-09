@@ -1,0 +1,213 @@
+:root {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #333;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #000000;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.5rem;
+  }
+  
+  .button {
+    display: inline-block;
+    background: linear-gradient(90deg, #0052d4, #4364f7, #6fb1fc);
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background: linear-gradient(90deg, #2a5298, rgb(49, 63, 192));
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .container {
+    max-width: 1000px;
+    padding: 20px;
+  }
+  
+  .landing-title {
+    font-size: 4rem;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #0052d4, #4364f7, #6fb1fc);
+    text-align: center;
+    margin: 2rem auto;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .landing-title img {
+    width: 650px;
+    height: 180px;
+  }
+  
+  .user-buttons {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    display: flex;
+    gap: 30px;
+    z-index: 2;
+  }
+  
+  .modal {
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    animation: animatezoom 0.6s;
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+  }
+  
+  .font-auth {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content p,
+  .modal-content label {
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+  }
+  
+  .modal-content input[type="text"],
+  .modal-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .cancelbutton,
+  .signupbutton,
+  .loginbutton {
+    display: inline-block;
+    background: linear-gradient(90deg, #0052d4, #4364f7, #6fb1fc);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  
+  #font-explore {
+    font-size: 2rem;
+  }
+  
+  .header-line {
+    width: 100%;
+    margin: 20px auto;
+    height: 1px;
+    background: #333;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .step {
+    flex: 1 1 200px;
+    max-width: 200px;
+    min-width: 150px;
+    background: #ffffffd3;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .step:hover {
+    transform: translateY(-5px);
+  }
+  
+  
+  @keyframes animatezoom {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
