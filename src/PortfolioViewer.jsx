@@ -23,6 +23,19 @@ export default function PortfolioViewer() {
         setErrorMsg('Could not fetch portfolio.');
       } else {
         setProfile(data);
+
+        // 👁️ Insert view into analytics
+        try {
+          await supabase.from('analytics').insert([
+            {
+              user_id: data.id,
+              event_type: 'view',
+              timestamp: new Date()
+            }
+          ]);
+        } catch (err) {
+          console.error('Failed to log view:', err.message);
+        }
       }
     };
 
