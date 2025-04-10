@@ -24,7 +24,6 @@ export default function PortfolioViewer() {
       } else {
         setProfile(data);
 
-        // 👁️ Insert view into analytics
         try {
           await supabase.from('analytics').insert([
             {
